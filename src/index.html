@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" />
+    <title>Portfolio - Mateo Courmont</title>
+  </head>
+  <body class="bg-teal-700">
+    <!--DIV MAIN-->
+    <main class="flex flex-col w-full h-screen pt-1">
+      <div class="flex flex-col gap-1 justify-center items-center h-16 w-20">
+        <img src="/src/img/address_book_pad.png" alt="cv_icon" id="icon_cv" />
+        <p class="font-desktop text-xxs text-gray-200">CV</p>
+      </div>
+      <a
+        href="mailto:courmontmateo@gmail.com?subject=Contact&body=Bonjour,"
+        class="block w-20 h-16"
+      >
+        <div class="flex flex-col gap-1 justify-center items-center h-16 w-20">
+          <img src="/src/img/mailbox_world-0.png" alt="mail_icon" />
+          <p class="font-desktop text-xxs text-gray-200">Mail</p>
+        </div>
+      </a>
+      <div
+        class="flex flex-col gap-1 justify-center items-center h-16 w-20"
+      ></div>
+      <a
+        href="https://github.com/MateoCourmont"
+        target="_blank"
+        class="block w-20 h-16"
+      >
+        <div class="flex flex-col gap-1 justify-center items-center h-16 w-20">
+          <img
+            src="/src/img/github.png"
+            alt="github_icon"
+            class="w-8 h-8"
+            href="github"
+          />
+          <p class="font-desktop text-xxs text-gray-200">GitHub</p>
+        </div>
+      </a>
+      <!--CV window if clicked-->
+      <div
+        id="window_cv"
+        class="hidden w-[800px] h-[600px] bg-gray-300 shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF] pt-1/2"
+      >
+        <div
+          class="window-cv-title flex items-center justify-between font-desktop text-xxs text-gray-200 h-6 w-full px-1 cursor-move"
+        >
+          <!-- title and icon : left -->
+          <div class="flex items-center gap-1">
+            <img
+              src="/src/img/address_book_pad.png"
+              alt="window_cv_icon"
+              class="w-4 h-4"
+            />
+            <p>CV</p>
+          </div>
+
+          <!-- close : right -->
+          <div class="buttons flex gap-1">
+            <button
+              id="reduce_cv"
+              class="flex items-center justify-center w-5 h-5 pb-1 bg-gray-300 border border-t-gray-500 border-l-gray-500 border-b-black border-r-black shadow-[inset_1px_1px_0_#fff,inset_-1px_-1px_0_#000] font-desktop text-black font-bold text-[9px] leading-none"
+            >
+              _
+            </button>
+            <button
+              id="close_cv"
+              class="flex items-center justify-center w-5 h-5 bg-gray-300 border border-t-gray-500 border-l-gray-500 border-b-black border-r-black shadow-[inset_1px_1px_0_#fff,inset_-1px_-1px_0_#000] font-desktop text-black font-bold text-[9px] leading-none"
+            >
+              X
+            </button>
+          </div>
+        </div>
+        <div class="window-content flex justify-center p-10">
+          <img src="/src/img/myCV.png" alt="cv_mateoCourmont" />
+        </div>
+      </div>
+
+      <!--DIV 'FOOTER'-->
+      <div
+        class="absolute bottom-0 w-full h-9 bg-gray-300 px-2 flex items-center justify-start gap-2"
+      >
+        <button
+          id="start"
+          class="flex gap-1 px-2 items-center justify-center font-desktop text-2xs font-bold shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF]"
+        >
+          <img
+            src="/src/img/windows-0.png "
+            alt="startmenu_icon"
+            class="w-6 h-6"
+          />
+          Démarrer
+        </button>
+        <!-- hidden if no click -->
+        <div
+          class="flex justify-center items-center gap-1 border border-t-gray-500 border-l-gray-500 border-b-white border-r-white p-1 h-7 bg-gray-100"
+          id="tab_cv"
+        >
+          <img
+            src="/src/img/address_book_pad.png"
+            alt="CV_taskbar_icon"
+            class="w-4 h-4"
+          />
+          <p class="font-desktop text-xxs w-20 text-start">CV</p>
+        </div>
+        <div
+          id="window_start"
+          class="hidden w-[200px] h-[400px] bg-gray-300 shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF] pt-1/2"
+        >
+          <div
+            class="win95writing flex flex-col items-center w-9 h-full bg-gray-500"
+          >
+            <p id="vertical_text">Windows<span class="font-light">95</span></p>
+          </div>
+        </div>
+        <div>
+          <p
+            class="font-desktop text-xxs border border-t-gray-500 border-l-gray-500 border-b-white border-r-white p-2 h-7"
+          >
+            &#169; Matéo Courmont.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+#window_cv {
+  position: absolute;
+  cursor: default;
+  width: 800px;
+  height: 600px;
+  overflow: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Ajuste le centrage précis */
+}
+
+@media (max-width: 800px) {
+  #window_cv {
+    width: 100%;
+  }
+}
+
+@media (max-height: 600px) {
+  #window_cv {
+    height: 100%;
+  }
+}
+
+.window-cv-title {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #1e3a8a;
+}
+
+/*scrollbar style*/
+#window_cv::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+#window_cv::-webkit-scrollbar-track {
+  background-color: #c0c0c0;
+  border-radius: 10px;
+}
+
+
+#window_cv::-webkit-scrollbar-thumb {
+  background-color: #808080; 
+  border-radius: 10px; 
+  border: 2px solid #ffffff; /
+}
+
+
+#window_cv::-webkit-scrollbar-thumb:hover {
+  background-color: #666666;
+}
+
+/* Minimizing anim */
+@keyframes minimizeWindow {
+    0% {
+      width: 800px;
+      height: 600px;
+      left: 50%;
+      top: 50%;
+      opacity: 1;
+    }
+    100% {
+      width: 0;
+      height: 0;
+      left: 5%;
+      top: 100%;  
+      opacity: 0;
+    }
+  }
+  
+  
+  .minimized {
+    animation: minimizeWindow 0.5s forwards;
+  }
+
+  @keyframes maximizeWindow {
+    0% {
+      width: 0;
+      height: 0;
+      left: 5%;
+      top: 100%;
+      opacity: 0;
+    }
+    100% {
+      width: 800px;
+      height: 600px;
+      left: 50%;
+      top: 50%;
+      opacity: 1;
+    }
+  }
+  
+  .maximized {
+    animation: maximizeWindow 0.5s forwards;
+  }
+
+  #tab_cv {
+    display: none;
+  }
+
+  #window_start {
+    position: absolute;
+    bottom: 35px; 
+    left: 2px;
+    z-index: 10;
+  }
+
+  #vertical_text {
+    writing-mode: vertical-lr;
+    font-family: "Arial", sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    color: #eeeeee;
+    transform: rotate(180deg); 
+    padding: 10px 5px;
+  }
+
+  .win95writing {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+  
+  
+  
