@@ -180,6 +180,21 @@ document
   .getElementById("tab_browser")
   .addEventListener("click", maximizeWindowBrowser);
 
+const iconCVStart = document.getElementById("cv_in_start");
+
+iconCVStart.addEventListener("dblclick", function () {
+  // show or hide the tab
+  if (tabCV.style.display === "none" || tabCV.style.display === "") {
+    tabCV.style.display = "flex";
+  } else {
+    tabCV.style.display = "none";
+  }
+});
+
+document
+  .getElementById("cv_in_start")
+  .addEventListener("dblclick", openWindowCV);
+
 document.addEventListener("DOMContentLoaded", () => {
   const windowBrowser = document.getElementById("window_browser"); // get window
   const titleBar = windowBrowser.querySelector(".window-browser-title"); // get the title to move

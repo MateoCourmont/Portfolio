@@ -53,7 +53,7 @@
       <!--CV window if clicked-->
       <div
         id="window_cv"
-        class="window hidden w-[800px] h-[600px] bg-gray-300 shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF] pt-1/2 z-1"
+        class="window hidden w-[800px] h-[600px] bg-gray-300 shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF] pt-1/2"
       >
         <div
           class="window-cv-title flex items-center justify-between font-desktop text-xxs text-gray-200 h-6 w-full px-1 cursor-move"
@@ -92,7 +92,7 @@
       <!--video embed Window-->
       <div
         id="window_browser"
-        class="window hidden w-[800px] h-[600px] bg-gray-300 shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF] pt-1/2 z-1"
+        class="window hidden w-[800px] h-[600px] bg-gray-300 shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF] pt-1/2"
       >
         <!-- Title bar -->
         <div
@@ -131,7 +131,7 @@
 
       <!--DIV 'FOOTER'-->
       <div
-        class="absolute bottom-0 w-full h-9 bg-gray-300 px-2 flex items-center justify-start gap-2 z-100"
+        class="absolute bottom-0 w-full h-9 bg-gray-300 px-2 flex items-center justify-start gap-2 z-9999"
       >
         <button
           id="start"
@@ -181,6 +181,7 @@
           <div class="wrapper-start-menu flex flex-col">
             <div
               class="flex justify-start items-center w-full h-[50px] p-2 gap-2"
+              id="cv_in_start"
             >
               <img
                 src="/src/img/message_file-0.png"
@@ -189,36 +190,46 @@
               />
               <p class="font-desktop text-black text-[9px]"><u>C</u>V</p>
             </div>
-            <div
-              class="flex justify-start items-center w-full h-[50px] p-2 gap-2"
+            <a
+              href="mailto:mateo.courmont@supdevinci-edu.fr?subject=Contact&body=Bonjour"
             >
-              <img
-                src="/src/img/mailbox_world-0.png"
-                alt="Mail_icon_startmenu"
-                class="w-7 h-7"
-              />
-              <p class="font-desktop text-black text-[9px]"><u>M</u>ail</p>
-            </div>
-            <div
-              class="flex justify-start items-center w-full h-[50px] p-2 gap-2"
-            >
-              <img
-                src="/src/img/github.png"
-                alt="GitHub_icon_startmenu"
-                class="w-7 h-7"
-              />
-              <p class="font-desktop text-black text-[9px]"><u>G</u>itHub</p>
-            </div>
-            <div
-              class="flex justify-start items-center w-full h-[50px] p-2 gap-2"
-            >
-              <img
-                src="/src/img/linkedin.png"
-                alt="LinkedIn_icon_startmenu"
-                class="w-7 h-7"
-              />
-              <p class="font-desktop text-black text-[9px]"><u>L</u>inkedIn</p>
-            </div>
+              <div
+                class="flex justify-start items-center w-full h-[50px] p-2 gap-2"
+              >
+                <img
+                  src="/src/img/mailbox_world-0.png"
+                  alt="Mail_icon_startmenu"
+                  class="w-7 h-7"
+                />
+                <p class="font-desktop text-black text-[9px]"><u>M</u>ail</p>
+              </div>
+            </a>
+            <a href="https://github.com/MateoCourmont">
+              <div
+                class="flex justify-start items-center w-full h-[50px] p-2 gap-2"
+              >
+                <img
+                  src="/src/img/github.png"
+                  alt="GitHub_icon_startmenu"
+                  class="w-7 h-7"
+                />
+                <p class="font-desktop text-black text-[9px]"><u>G</u>itHub</p>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/mateo-courmont-5434b2292/">
+              <div
+                class="flex justify-start items-center w-full h-[50px] p-2 gap-2"
+              >
+                <img
+                  src="/src/img/linkedin.png"
+                  alt="LinkedIn_icon_startmenu"
+                  class="w-7 h-7"
+                />
+                <p class="font-desktop text-black text-[9px]">
+                  <u>L</u>inkedIn
+                </p>
+              </div>
+            </a>
           </div>
         </div>
         <div>
