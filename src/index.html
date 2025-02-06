@@ -9,42 +9,51 @@
   </head>
   <body class="bg-teal-700">
     <!--DIV MAIN-->
-    <main class="flex flex-col w-full h-screen pt-1">
-      <div class="flex flex-col gap-1 justify-center items-center h-16 w-20">
-        <img src="/src/img/address_book_pad.png" alt="cv_icon" id="icon_cv" />
+    <main class="flex flex-col w-full h-screen pt-3">
+      <div
+        class="flex flex-col gap-1 justify-center items-center h-18 w-20 pb-3"
+      >
+        <img src="/src/img/message_file-0.png" alt="cv_icon" id="icon_cv" />
         <p class="font-desktop text-xxs text-gray-200">CV</p>
       </div>
       <a
-        href="mailto:courmontmateo@gmail.com?subject=Contact&body=Bonjour,"
-        class="block w-20 h-16"
+        href="mailto:mateo.courmont@supdevinci-edu.fr?subject=Contact&body=Bonjour"
       >
-        <div class="flex flex-col gap-1 justify-center items-center h-16 w-20">
-          <img src="/src/img/mailbox_world-0.png" alt="mail_icon" />
+        <div
+          class="flex flex-col gap-1 justify-center items-center h-18 w-20 pb-3"
+        >
+          <img
+            src="/src/img/mailbox_world-0.png"
+            alt="mail_icon"
+            id="icon_mail"
+          />
           <p class="font-desktop text-xxs text-gray-200">Mail</p>
         </div>
       </a>
-      <div
-        class="flex flex-col gap-1 justify-center items-center h-16 w-20"
-      ></div>
-      <a
-        href="https://github.com/MateoCourmont"
-        target="_blank"
-        class="block w-20 h-16"
-      >
-        <div class="flex flex-col gap-1 justify-center items-center h-16 w-20">
+      <a href="https://github.com/MateoCourmont">
+        <div
+          class="flex flex-col gap-1 justify-center items-center h-18 w-20 pb-3"
+        >
           <img
             src="/src/img/github.png"
             alt="github_icon"
+            id="icon_github"
             class="w-8 h-8"
-            href="github"
           />
           <p class="font-desktop text-xxs text-gray-200">GitHub</p>
         </div>
       </a>
+      <div
+        class="desktop-icon flex flex-col gap-1 justify-center items-center h-18 w-20 pb-3"
+        data-url="https://www.youtube.com/embed/9y9qzRYb4_Y?si=9gOBVx0M8cTUYiqS"
+      >
+        <img src="/src/img/video_mk-4.png" alt="ie_icon" id="icon_ie" />
+        <p class="font-desktop text-xxs text-gray-200">SupDeVinci</p>
+      </div>
       <!--CV window if clicked-->
       <div
         id="window_cv"
-        class="hidden w-[800px] h-[600px] bg-gray-300 shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF] pt-1/2"
+        class="window hidden w-[800px] h-[600px] bg-gray-300 shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF] pt-1/2 z-1"
       >
         <div
           class="window-cv-title flex items-center justify-between font-desktop text-xxs text-gray-200 h-6 w-full px-1 cursor-move"
@@ -52,7 +61,7 @@
           <!-- title and icon : left -->
           <div class="flex items-center gap-1">
             <img
-              src="/src/img/address_book_pad.png"
+              src="/src/img/message_file-0.png"
               alt="window_cv_icon"
               class="w-4 h-4"
             />
@@ -80,9 +89,49 @@
         </div>
       </div>
 
+      <!--video embed Window-->
+      <div
+        id="window_browser"
+        class="window hidden w-[800px] h-[600px] bg-gray-300 shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF] pt-1/2 z-1"
+      >
+        <!-- Title bar -->
+        <div
+          class="window-browser-title flex items-center justify-between font-desktop text-xxs text-gray-200 h-6 w-full px-1"
+        >
+          <div class="flex items-center gap-2">
+            <img
+              src="/src/img/video_mk-4.png"
+              alt="video Icon"
+              class="w-4 h-4"
+            />
+            <p>SDV - Présentation</p>
+          </div>
+          <div class="flex gap-1">
+            <button
+              id="reduce_browser"
+              class="flex items-center justify-center w-5 h-5 bg-gray-300 border border-t-gray-500 border-l-gray-500 border-b-black border-r-black shadow-[inset_1px_1px_0_#fff,inset_-1px_-1px_0_#000] font-desktop text-black font-bold text-[9px] leading-none"
+            >
+              _
+            </button>
+            <button
+              id="close_browser"
+              class="flex items-center justify-center w-5 h-5 bg-gray-300 border border-t-gray-500 border-l-gray-500 border-b-black border-r-black shadow-[inset_1px_1px_0_#fff,inset_-1px_-1px_0_#000] font-desktop text-black font-bold text-[9px] leading-none"
+            >
+              X
+            </button>
+          </div>
+        </div>
+        <!-- Iframe content -->
+        <iframe
+          id="iframe_content"
+          src=""
+          class="w-full h-[calc(100%-2rem)]"
+        ></iframe>
+      </div>
+
       <!--DIV 'FOOTER'-->
       <div
-        class="absolute bottom-0 w-full h-9 bg-gray-300 px-2 flex items-center justify-start gap-2"
+        class="absolute bottom-0 w-full h-9 bg-gray-300 px-2 flex items-center justify-start gap-2 z-100"
       >
         <button
           id="start"
@@ -101,20 +150,75 @@
           id="tab_cv"
         >
           <img
-            src="/src/img/address_book_pad.png"
+            src="/src/img/message_file-0.png"
             alt="CV_taskbar_icon"
             class="w-4 h-4"
           />
           <p class="font-desktop text-xxs w-20 text-start">CV</p>
         </div>
+        <!-- hidden if no click -->
+        <div
+          class="flex justify-center items-center gap-1 border border-t-gray-500 border-l-gray-500 border-b-white border-r-white p-1 h-7 bg-gray-100"
+          id="tab_browser"
+        >
+          <img
+            src="/src/img/msie1-1.png"
+            alt="Ie_taskbar_icon"
+            class="w-4 h-4"
+          />
+          <p class="font-desktop text-xxs w-20 text-start">Navigateur</p>
+        </div>
+        <!--START MENU-->
         <div
           id="window_start"
-          class="hidden w-[200px] h-[400px] bg-gray-300 shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF] pt-1/2"
+          class="hidden flex w-[200px] h-[400px] bg-gray-300 shadow-[3px_3px_0.25px_0.25px_#000000,_-3px_-3px_0.25px_0.25px_#FFFF] pt-1/2"
         >
           <div
             class="win95writing flex flex-col items-center w-9 h-full bg-gray-500"
           >
             <p id="vertical_text">Windows<span class="font-light">95</span></p>
+          </div>
+          <div class="wrapper-start-menu flex flex-col">
+            <div
+              class="flex justify-start items-center w-full h-[50px] p-2 gap-2"
+            >
+              <img
+                src="/src/img/message_file-0.png"
+                alt="CV_icon_startmenu"
+                class="w-7 h-7"
+              />
+              <p class="font-desktop text-black text-[9px]"><u>C</u>V</p>
+            </div>
+            <div
+              class="flex justify-start items-center w-full h-[50px] p-2 gap-2"
+            >
+              <img
+                src="/src/img/mailbox_world-0.png"
+                alt="Mail_icon_startmenu"
+                class="w-7 h-7"
+              />
+              <p class="font-desktop text-black text-[9px]"><u>M</u>ail</p>
+            </div>
+            <div
+              class="flex justify-start items-center w-full h-[50px] p-2 gap-2"
+            >
+              <img
+                src="/src/img/github.png"
+                alt="GitHub_icon_startmenu"
+                class="w-7 h-7"
+              />
+              <p class="font-desktop text-black text-[9px]"><u>G</u>itHub</p>
+            </div>
+            <div
+              class="flex justify-start items-center w-full h-[50px] p-2 gap-2"
+            >
+              <img
+                src="/src/img/linkedin.png"
+                alt="LinkedIn_icon_startmenu"
+                class="w-7 h-7"
+              />
+              <p class="font-desktop text-black text-[9px]"><u>L</u>inkedIn</p>
+            </div>
           </div>
         </div>
         <div>
