@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "WinFont";
-  src: url("/docs/fonts/px_sans_nouveaux.ttf") format("truetype");
+  src: url("/src/fonts/px_sans_nouveaux.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
