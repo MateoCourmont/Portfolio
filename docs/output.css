@@ -835,7 +835,7 @@ video {
 @font-face {
   font-family: "WinFont";
 
-  src: url("/src/fonts/px_sans_nouveaux.ttf") format("truetype");
+  src: url("/Portfolio/docs/fonts/px_sans_nouveaux.ttf") format("truetype");
 
   font-weight: normal;
 
