@@ -241,7 +241,14 @@
 
 #cv_in_start:hover, #linkedin_in_start:hover, #github_in_start:hover, #mail_in_start:hover {
   background-color: #1e3a8a;
-  color: #c0c0c0;
+  width: 100%;
+}
+
+#cv_in_start:hover p,
+#linkedin_in_start:hover p,
+#github_in_start:hover p,
+#mail_in_start:hover p {
+  color:  #c0c0c0;
 }
 
 
