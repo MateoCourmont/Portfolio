@@ -244,7 +244,7 @@
 }
 
 #cv_in_start, #linkedin_in_start, #github_in_start, #mail_in_start {
-  width: 100%; 
+  height: 100%; 
   display: flex; 
   justify-content: flex-start; 
 }
