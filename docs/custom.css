@@ -244,13 +244,13 @@
 }
 
 #cv_in_start, #linkedin_in_start, #github_in_start, #mail_in_start {
-  height: 100%; 
   display: flex; 
   justify-content: flex-start; 
 }
 
 #cv_in_start:hover, #linkedin_in_start:hover, #github_in_start:hover, #mail_in_start:hover {
   background-color: #1e3a8a;
+  flex: 1;
   color: white; 
 }
 
