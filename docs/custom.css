@@ -245,7 +245,6 @@
 
 #cv_in_start:hover, #linkedin_in_start:hover, #github_in_start:hover, #mail_in_start:hover {
   background-color: #1e3a8a;
-  flex: 1;
   color: white; 
 }
 
